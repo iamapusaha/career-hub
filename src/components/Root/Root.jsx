@@ -6,7 +6,6 @@ const Root = () => {
     return (
         <div>
             <Header></Header>
-            <h1>this is our Root path</h1>
             <Outlet></Outlet>
             <Footer></Footer>
         </div>
