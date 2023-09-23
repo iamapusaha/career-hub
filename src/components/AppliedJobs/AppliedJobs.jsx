@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import { getStoredJobApplication } from "../../utility/localStore";
 import { useEffect, useState } from "react";
+import AppliedJob from "../AppliedJob/AppliedJob";
 
 const AppliedJobs = () => {
     const [appliedJobs, setAppliedJobs] = useState([])
@@ -21,7 +22,9 @@ const AppliedJobs = () => {
     }, [])
     return (
         <div>
-            <h1>Hello {appliedJobs.length}</h1>
+            {
+                appliedJobs.map(appliedJob => <AppliedJob key={appliedJob.id} appliedJob={appliedJob}></AppliedJob>)
+            }
         </div>
     );
 };
