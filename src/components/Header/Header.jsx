@@ -9,7 +9,7 @@ const Header = () => {
         <li><NavLink to="/blog">Blog</NavLink></li>
     </>
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-[#F9F9FF]">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
