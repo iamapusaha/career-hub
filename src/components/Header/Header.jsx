@@ -20,7 +20,7 @@ const Header = () => {
                         {menuItem}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                <a className="text-4xl font-extrabold text-[#1A1919]">Career Hub</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -29,7 +29,7 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Button</a>
+                <a className="btn bg-gradient-to-r from-cyan-500 to-blue-500">Start Applying</a>
             </div>
         </div>
     );
