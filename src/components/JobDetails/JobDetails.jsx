@@ -4,12 +4,18 @@
 
 
 import { useLoaderData, useParams } from "react-router-dom";
+import { saveJobApplication } from "../../utility/localStore";
 
 const JobDetails = () => {
     const jobs = useLoaderData();
     const { id } = useParams();
-    const job = jobs.find(job => job.id === parseInt(id))
+    const idInt = parseInt(id)
+    const job = jobs.find(job => job.id === parseInt(idInt))
     const { job_description, job_responsibility, educational_requirements, experiences, salary, job_title, contact_information } = job;
+    const handleApplyNow = () => {
+        saveJobApplication(idInt)
+        alert('job applied!')
+    }
     return (
         <div className="my-32">
             <div className="grid grid-cols-3 gap-6">
@@ -31,7 +37,7 @@ const JobDetails = () => {
                         <p><span className="text-[#1A1919] font-extrabold">Email : </span> {contact_information.email}</p>
                         <p><span className="text-[#1A1919] font-extrabold">Address : </span> {contact_information.address}</p>
                     </div>
-                    <button className="text-xl font-extrabold bg-gradient-to-r from-cyan-500 to-blue-500 w-full py-5 rounded-lg">Apply Now</button>
+                    <button onClick={handleApplyNow} className="text-xl font-extrabold bg-gradient-to-r from-cyan-500 to-blue-500 w-full py-5 rounded-lg">Apply Now</button>
                 </div>
             </div>
         </div>
