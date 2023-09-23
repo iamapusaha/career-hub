@@ -1,9 +1,9 @@
 
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { MapPinIcon, CurrencyDollarIcon } from '@heroicons/react/24/solid'
 
 const JobFeature = ({ job }) => {
-    const { logo, job_title, company_name, remote_or_onsite, location, job_type, salary, job_description } = job
+    const { logo, job_title, company_name, remote_or_onsite, location, job_type, salary } = job
     return (
 
         <div className='space-y-4 border border-[#E8E8E8] rounded-lg p-10'>
@@ -26,7 +26,7 @@ const JobFeature = ({ job }) => {
 };
 
 JobFeature.propTypes = {
-
+    job: PropTypes.object
 };
 
 export default JobFeature;
