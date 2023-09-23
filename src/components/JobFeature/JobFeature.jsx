@@ -1,9 +1,10 @@
 
 import PropTypes from 'prop-types';
 import { MapPinIcon, CurrencyDollarIcon } from '@heroicons/react/24/solid'
+import { Link } from 'react-router-dom';
 
 const JobFeature = ({ job }) => {
-    const { logo, job_title, company_name, remote_or_onsite, location, job_type, salary } = job
+    const { id, logo, job_title, company_name, remote_or_onsite, location, job_type, salary } = job
     return (
 
         <div className='space-y-4 border border-[#E8E8E8] rounded-lg p-10'>
@@ -18,7 +19,9 @@ const JobFeature = ({ job }) => {
                 <span className='flex gap-2'><MapPinIcon className='w-6'></MapPinIcon> {location}</span>
                 <span className='flex gap-2'><CurrencyDollarIcon className='w-6'></CurrencyDollarIcon> {salary}</span>
             </div>
-            <button className='text-lg font-extrabold text-white bg-gradient-to-r from-cyan-500 to-blue-500 py-3 px-4 rounded'>View Details</button>
+            <Link to={`/job/${id}`}>
+                <button className='text-lg font-extrabold text-white bg-gradient-to-r from-cyan-500 to-blue-500 py-3 px-4 rounded'>View Details</button>
+            </Link>
         </div>
 
 
