@@ -6,7 +6,9 @@ import { Link } from 'react-router-dom';
 const AppliedJob = ({ appliedJob }) => {
     const { id, logo, job_title, company_name, remote_or_onsite, location, job_type, salary } = appliedJob
     return (
+
         <div className='my-32'>
+
             <div className='flex justify-between items-center'>
                 <div className='flex gap-8 items-center'>
                     <div className=''>
